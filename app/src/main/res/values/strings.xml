@@ -7,4 +7,8 @@
     <string name="enter_comment">Enter comment</string>
     <string name="enter_time">Enter time</string>
     <string name="enter_day">Enter day</string>
+    <string name="subj_details">Day: %1$s \n
+        Time: %2$s \n
+        Comment: %3$s
+    </string>
 </resources>

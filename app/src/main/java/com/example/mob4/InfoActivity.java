@@ -18,6 +18,10 @@ public class InfoActivity extends AppCompatActivity {
             result -> {
                 if(result.getResultCode() == RESULT_OK){
                     Toast.makeText(getApplicationContext(), "Время занятия успешно передано", Toast.LENGTH_SHORT).show();
+                    Intent data = result.getData();
+                    System.out.println(data);
+                    if(data != null)
+                        showDetails(data.getStringExtra("day"), data.getStringExtra("time"), data.getStringExtra("comment"));
                 }
             }
     );
@@ -27,6 +31,7 @@ public class InfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityInfoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        showDetails("","","");
 
         binding.enterInfoBtn.setOnClickListener(v ->{
             addSubjectLauncher.launch(new Intent(v.getContext(), ResultActivity.class));
@@ -58,4 +63,8 @@ public class InfoActivity extends AppCompatActivity {
         binding.nameTv.setText(getResources().getString(R.string.user_name, ""));
         binding.surnameTv.setText(getResources().getString(R.string.user_surname, ""));
     }
+    private void showDetails(String day, String time, String comment){
+        binding.detailsTv.setText(getResources().getString(R.string.subj_details, day, time, comment));
+    }
+
 }
