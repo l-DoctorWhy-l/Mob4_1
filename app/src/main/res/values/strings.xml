@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Mob4</string>
+    <string name="user_name">Name: %1$s</string>
+    <string name="user_surname">Surname: %1$s</string>
+    <string name="enter_info">Enter info</string>
+    <string name="ok">Ok</string>
+    <string name="enter_comment">Enter comment</string>
+    <string name="enter_time">Enter time</string>
+    <string name="enter_day">Enter day</string>
+</resources>
