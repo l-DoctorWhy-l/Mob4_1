@@ -29,7 +29,7 @@ public class ResultActivity extends AppCompatActivity {
             intent.putExtra("day", Objects.requireNonNull(binding.dayEt.getText()).toString());
             intent.putExtra("time", Objects.requireNonNull(binding.timeEt.getText()).toString());
             intent.putExtra("comment", Objects.requireNonNull(binding.commentEt.getText()).toString());
-            setResult(RESULT_OK);
+            setResult(RESULT_OK, intent);
             finish();
         });
     }

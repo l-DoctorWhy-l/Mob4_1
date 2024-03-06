@@ -21,9 +21,6 @@ public class MainActivity extends AppCompatActivity {
             if (binding.inputField.getText() == null)
                 return;
             String[] text = binding.inputField.getText().toString().split(" ");
-            System.out.println("Clicked");
-            System.out.println(text[0]);
-            System.out.println(text[1]);
             System.out.println(text.length);
             if (text.length != 2)
                 return;
